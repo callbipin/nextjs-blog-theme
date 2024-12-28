@@ -12,17 +12,6 @@ const person = {
   languages: ["English", "Nepali"], // optional: Leave the array empty if you don't want to display languages
 };
 
-const newsletter = {
-  display: true,
-  title: <>Have any questions?</>,
-  description: (
-    <>
-      I am a person who loves communicating with people. If you have any
-      querries, you can reach out to me through email.
-    </>
-  ),
-};
-
 const social = [
   // Links are automatically displayed.
   // Import new icons in /once-ui/icons.ts
@@ -192,31 +181,57 @@ const about = {
         title: "Tools & Platforms",
         description: (
           <>
-            Proficient in MadCap, Confluence, Jira, Zendesk, Slack, Git, SIEM,
-            SOAR, and Salesforce. Knowledge of Programming languages (NodeJs,
-            Python), programming concepts (RESTAPI, OOP). More skills present in
-            <a href="https://www.salesforce.com/trailblazer/bipinrimal">
-              Trailblazer
-            </a>
-            .
+            Proficient in:
+            <ul>
+              <li>MadCap Flare</li>
+              <li>Confluence, Jira, bitbucket</li>
+              <li>Zendesk</li>
+              <li>Slack</li>
+              <li>Git, Gitbook</li>
+              <li>SIEM & SOAR Platforms</li>
+              <li>Salesforce</li>
+            </ul>
+            Knowledge of:
+            <ul>
+              <li>Programming languages: NodeJs, Python</li>
+              <li>Programming concepts: REST API, OOP</li>
+            </ul>
+            <p>
+              More skills are showcased in{" "}
+              <a href="https://www.salesforce.com/trailblazer/bipinrimal">
+                Trailblazer
+              </a>
+              .
+            </p>
           </>
         ),
-        // optional: leave the array empty if you don't want to display images
         images: [],
       },
       {
         title: "Soft Skills",
         description: (
           <>
-            <a href="https://www.goskills.com/Profile/BipinRimal">
-              GoSkills certified
-            </a>{" "}
-            in Customer Service Training and Business Writing. Placed second in
-            International Speech Contest 2023-2024, Area A4, District 41,
-            Toastmasters Internation
+            Certified in:
+            <ul>
+              <li>Customer Service Training</li>
+              <li>Business Writing</li>
+              <p>
+                View certification at{" "}
+                <a href="https://www.goskills.com/Profile/BipinRimal">
+                  GoSkills Profile
+                </a>
+                .
+              </p>
+            </ul>
+            Achievements:
+            <ul>
+              <li>
+                Placed second in the International Speech Contest 2023-2024,
+                Area A4, District 41, Toastmasters International
+              </li>
+            </ul>
           </>
         ),
-        // optional: leave the array empty if you don't want to display images
         images: [],
       },
     ],
@@ -231,4 +246,4 @@ const blog = {
   // All posts will be listed on the /blog route
 };
 
-export { person, social, newsletter, home, about, blog };
+export { person, social, home, about, blog };
