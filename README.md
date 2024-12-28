@@ -1,147 +1,89 @@
-![Netlify Next.js Blog Template designed by Bejamas](https://user-images.githubusercontent.com/43764894/223762618-62742b4e-9424-44a7-8e85-9f7e4e19db54.png)
+# **Build your portfolio with Once UI's Magic Portfolio**
+
+View the [demo here](https://demo.magic-portfolio.com).
+
+![Magic Portfolio](public/images/cover.png)
 
 
-[![Deploy to Netlify Button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/nextjs-blog-theme)
+# **Getting started**
 
+Magic Portfolio was built with [Once UI](https://once-ui.com) for [Next.js](https://nextjs.org). It requires Node.js v18.17+.
 
-A customizable blog starter using:
-
-- [Next.js](https://github.com/vercel/next.js) v15 (Pages Router)
-- [Tailwind](https://tailwindcss.com/) v3.x
-- [Netlify Visual Editor](https://docs.netlify.com/visual-editor/overview/)
-- Built-in [MDX](https://mdxjs.com/) support
-- Includes modern design with dark & light themes
-
-![Preview of blog theme. Author named Jay Doe and blog's name is "Next.js Blog Theme" with one blog post](nextjs-blog-theme-preview.png)
-
-[Take a gander at the demo.](https://bejamas-nextjs-blog.netlify.app)
-
-[Click here to watch the template walkthrough!](https://www.youtube.com/watch?v=63QZHs259dY)
-
-## Table of Contents:
-
-- [Getting Started](#getting-started)
-  - [Setting Up Locally](#setting-up-locally)
-  - [Using the Wizard](#using-the-setup-wizard)
-- [Configuring the Blog](#configuring-the-blog)
-- [Adding New Posts](#adding-new-posts)
-- [Netlify Visual Editor](#netlify-visual-editor)
-- [Testing](#testing)
-  - [Included Default Testing](#included-default-testing)
-  - [Removing Renovate](#removing-renovate)
-
-## Getting Started
-
----
-
-You can get started with this project in two ways: locally or using the [setup wizard](https://nextjs-wizard.netlify.app/).
-
-### Setting Up Locally
-
-If you're doing it locally, start with clicking the [use this template](https://github.com/netlify-templates/nextjs-blog-theme/generate) button on GitHub. This will create a new repository with this template's files on your GitHub account. Once that is done, clone your new repository and navigate to it in your terminal.
-
-From there, you can install the project's dependencies by running:
-
-```shell
-yarn install
+**1. Clone the repository**
+```
+git clone https://github.com/once-ui-system/magic-portfolio.git
 ```
 
-Finally, you can run your project locally with:
-
-```shell
-yarn run dev
+**2. Install dependencies**
+```
+npm install
 ```
 
-Open your browser and visit <http://localhost:3000>, your project should be running!
-
-### Using the Setup Wizard
-
-![Preview of Setup Wizard showing the initial page of a setup form](nextjs-setup-wizard.png)
-
-Through the [setup wizard](https://nextjs-wizard.netlify.app/), you can create your blog in a few clicks and deploy to Netlify.
-
-## Configuring the blog
-
-The config is based on environment variables to make it easy to integrate with any Jamstack platform, like Netlify.
-
-Here are the variables you can edit:
-| Variable | Description | Options
-| --- | --- | --- |
-| `BLOG_NAME` | the name of your blog, displayed below the avatar ||
-| `BLOG_TITLE` | the main header (`h1`) on the home page ||
-| `BLOG_FOOTER_TEXT`| the text in the footer ||
-| `BLOG_THEME` | the theme to pass to Tailwind | default |
-| `BLOG_FONT_HEADINGS` | the font-family for all HTML headings, from `h1` to `h6`| sans-serif (default), serif, monospace|
-| `BLOG_FONT_PARAGRAPHS` | the font-family for all other HTML elements | sans-serif (default), serif, monospace|
-
-All of the env variables can be configured through the [Wizard](https://nextjs-wizard.netlify.app/) or through setting the project's environment variables. You can do this in your Netlify dashaboard (Site settings/Build & deploy/Environment/Environment variables).
-
-https://user-images.githubusercontent.com/3611928/153997545-6dcdeef0-e570-49e7-93d6-ce0d393d16c9.mp4
-
-[alt: video walkthrough of editing env vars]
-
-If setting an environment variable isn't your cup of tea, the defaults can be changed in [`utils/global-data.js`](/utils/global-data.js). You can also remove the variables and hard code blog information where these variables are used in the code base.
-
-- `BLOG_THEME, BLOG_FONT_HEADINGS, & BLOG_FONT_PARAGRAPHS` are used in [`tailwind-preset.js`](tailwind-preset.js)
-- `BLOG_NAME, BLOG_TITLE, BLOG_FOOTER_TEXT` are used in [`pages/index.js`](pages/index.js) & [`pages/posts/[slug].js`](pages/posts/[slug].js) through the `globalData` object.
-
-## Adding new posts
-
-All posts are stored in `/posts` directory. To make a new post, create a new file with the [`.mdx` extension](https://mdxjs.com/).
-
-Since the posts are written in `MDX` format you can pass props and components. That means you can use [React components](https://reactjs.org/docs/components-and-props.html) inside your posts to make them more interactive. Learn more about how to do so in the [MDX docs on content](https://mdxjs.com/docs/using-mdx/#components).
-
-https://user-images.githubusercontent.com/3611928/152727802-102ec296-41c8-446d-93ed-922d11187073.mp4
-
-[alt: video walkthrough of adding a new blog post]
-
-## Netlify Visual Editor
-
-This template is configured to work with [visual editing](https://docs.netlify.com/visual-editor/overview/) and [Git Content Source](https://docs.netlify.com/create/content-sources/git/).
-
-### Develop with Netlify Visual Editor Locally
-
-The typical development process is to begin by working locally. Clone this repository, then run `npm install` in its root directory.
-
-Run the Next.js development server:
-
-```txt
-cd nextjs-blog-theme
+**3. Run dev server**
+```
 npm run dev
 ```
 
-Install the [Netlify Visual Editor CLI](https://www.npmjs.com/package/@stackbit/cli). Then open a new terminal window in the same project directory and run the Netlify visual editor dev server:
-
-```txt
-npm install -g @stackbit/cli
-stackbit dev
+**4. Edit config**
+```
+src/app/resources/config
 ```
 
-This outputs your own Netlify visual editor URL. Open this, register, or sign in, and you will be directed to Netlify's visual editor for your new project.
+**5. Edit content**
+```
+src/app/resources/content (or content-i18n for localization)
+```
 
-![Next.js Dev + Visual Editor Dev](https://assets.stackbit.com/docs/next-dev-stackbit-dev.png)
+**6. Create blog posts / projects**
+```
+Add a new .mdx file to src/app/[locale]/blog/posts or src/app/[locale]/work/projects
+```
 
-### Next Steps
+# **Features**
 
-Here are a few suggestions on what to do next if you're new to Netlify Visual Editor:
+## **Once UI**
+- All tokens, components & features of [Once UI](https://once-ui.com)
 
-- Learn [Netlify visual editor overview](https://docs.netlify.com/visual-editor/visual-editing/)
-- Check [Netlify visual editor reference documentation](https://visual-editor-reference.netlify.com/)
+## **SEO**
+- Automatic open-graph and X image generation with next/og
+- Automatic schema and metadata generation based on the content file
 
-## Testing
+## **Design**
+- Responsive layout optimized for all screen sizes
+- Timeless design without heavy animations and motion
+- Endless customization options through [data attributes](https://once-ui.com/docs/theming)
 
-### Included Default Testing
+## **Content**
+- Render sections conditionally based on the content file
+- Enable or disable pages for blog, work, gallery and about / CV
+- Generate and display social links automatically
+- Set up password protection for URLs
 
-We’ve included some tooling that helps us maintain these templates. This template currently uses:
+## **Localization (NEW)**
+- Magic Portfolio now supports localization with the next-intl library
+- See more info in resources/config.js
 
-- [Renovate](https://www.mend.io/free-developer-tools/renovate/) - to regularly update our dependencies
+# **Authors**
 
-If your team is not interested in this tooling, you can remove them with ease!
+Connect with us on Threads or LinkedIn.
 
-### Removing Renovate
+Lorant Toth: [Threads](https://www.threads.net/@lorant.one), [LinkedIn](https://www.linkedin.com/in/tothlorant/)  
+Zsofia Komaromi: [Threads](https://www.threads.net/@zsofia_kom), [LinkedIn](https://www.linkedin.com/in/zsofiakomaromi/)
 
-In order to keep our project up-to-date with dependencies we use a tool called [Renovate](https://github.com/marketplace/renovate). If you’re not interested in this tooling, delete the `renovate.json` file and commit that onto your main branch.
+Localization added by [François Hernandez](https://github.com/francoishernandez)
 
-## Support
+# **Get involved**
 
-If you get stuck along the way, get help in our [support forums](https://answers.netlify.com/).
+- Join the [Design Engineers Club on Discord](https://discord.com/invite/5EyAQ4eNdS) and share your portfolio with us!
+- Report a [bug](https://github.com/once-ui-system/magic-portfolio/issues/new?labels=bug&template=bug_report.md).
+
+# **License**
+
+Distributed under the CC BY-NC 4.0 License.
+- Commercial usage is not allowed.
+- Attribution is required.
+
+See `LICENSE.txt` for more information.
+
+# **Deploy with Vercel**
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&project-name=portfolio&repository-name=portfolio&redirect-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&demo-title=Magic%20Portfolio&demo-description=Showcase%20your%20designers%20or%20developer%20portfolio&demo-url=https%3A%2F%2Fdemo.magic-portfolio.com&demo-image=%2F%2Fraw.githubusercontent.com%2Fonce-ui-system%2Fmagic-portfolio%2Fmain%2Fpublic%2Fimages%2Fcover.png)
