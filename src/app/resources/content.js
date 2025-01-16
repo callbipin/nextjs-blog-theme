@@ -65,7 +65,7 @@ const about = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "https://cal.com/bipin-rimal-q4fzar/30min",
   },
   intro: {
     display: true,
@@ -123,7 +123,7 @@ const about = {
       },
       {
         company: "ComplianceQuest",
-        timeframe: " Feb 2020 - Jan 2023",
+        timeframe: " Feb 2022 - Jan 2023",
         role: "Technical Writer",
         achievements: [
           <>
