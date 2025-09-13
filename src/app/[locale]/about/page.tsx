@@ -14,7 +14,7 @@ import TableOfContents from '@/components/about/TableOfContents';
 import styles from '@/components/about/about.module.scss';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
-import { person, social, about, openSource } from "@/app/resources/content";
+import { person, social, about } from "@/app/resources/content";
 
 /** Generate SEO + social metadata */
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
@@ -126,7 +126,7 @@ export default function About({ params: { locale } }: { params: { locale: string
             direction="column"
             alignItems="center"
           >
-            <Avatar src={person.avatar} size="xl" alt={`${person.name} avatar`} />
+            <Avatar src={person.avatar} size="xl" />
             <Flex gap="8" alignItems="center">
               <Icon onBackground="accent-weak" name="globe" />
               {person.location}

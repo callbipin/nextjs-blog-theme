@@ -1,0 +1,7 @@
+import { requestLocale } from 'next-intl/server';
+
+export async function getRequestConfig() {
+  const locale = await requestLocale();
+  // ...your config logic...
+  return { locale };
+}
