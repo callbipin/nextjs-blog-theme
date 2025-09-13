@@ -9,7 +9,7 @@ import styles from "@/components/Header.module.scss";
 import { routes, display } from "@/app/resources";
 
 import { routing } from "@/i18n/routing";
-import { Locale, usePathname, useRouter } from "@/i18n/routing";
+import { usePathname, useRouter } from "@/i18n/routing";
 import { renderContent } from "@/app/resources";
 import { useTranslations } from "next-intl";
 import { i18n } from "@/app/resources/config";
@@ -56,12 +56,12 @@ export const Header = () => {
   const pathname = usePathname() ?? "";
   const params = useParams();
 
-  function handleLanguageChange(locale: string) {
-    const nextLocale = locale as Locale;
-    startTransition(() => {
-      router.replace(pathname, { locale: nextLocale });
-    });
-  }
+  // function handleLanguageChange(locale: string) {
+  //   const nextLocale = locale as Locale;
+  //   startTransition(() => {
+  //     router.replace(pathname, { locale: nextLocale });
+  //   });
+  // }
 
   const t = useTranslations();
   // const { person, home, about, blog } = renderContent(t);
@@ -160,7 +160,7 @@ export const Header = () => {
                 gap="2"
                 justifyContent="center"
               >
-                {i18n &&
+                {/* {i18n &&
                   routing.locales.map((locale, index) => (
                     <ToggleButton
                       key={index}
@@ -172,7 +172,7 @@ export const Header = () => {
                     >
                       {locale.toUpperCase()}
                     </ToggleButton>
-                  ))}
+                  ))} */}
               </Flex>
             )}
             <Flex hide="s">
