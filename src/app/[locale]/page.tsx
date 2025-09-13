@@ -141,7 +141,7 @@ export default function Home({
         </Flex>
       </Flex>
 
-      {routes["/blog"] && (
+      {/* {routes["/blog"] && (
         <Flex fillWidth gap="24" mobileDirection="column">
           <Flex flex={1} paddingLeft="l">
             <Heading as="h2" variant="display-strong-xs" wrap="balance">
@@ -152,7 +152,7 @@ export default function Home({
             <Posts range={[1, 2]} columns="2" locale={locale} />
           </Flex>
         </Flex>
-      )}
+      )} */}
     </Flex>
   );
 }
