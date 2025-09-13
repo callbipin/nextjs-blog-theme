@@ -217,8 +217,8 @@ const about = {
               <li>Business Writing</li>
               <p>
                 View certification at{" "}
-                <a href="https://www.goskills.com/Profile/BipinRimal">
-                  GoSkills Profile
+                <a href="https://www.linkedin.com/in/bipinrimal314/details/certifications/">
+                  LinkedIn Profile
                 </a>
                 .
               </p>
@@ -236,14 +236,30 @@ const about = {
       },
     ],
   },
+  openSource: {
+    display: true,
+    title: "Open Source Contributions",
+    contributions: [
+      {
+        project: "Fern API Docs",
+        description: "Enhanced documentation and navigation usability.",
+        prs: [
+          { url: "https://github.com/fern-api/docs/pull/397", label: "Add reference to Audiences for filtering API endpoints in API Reference docs" },
+          { url: "https://github.com/fern-api/docs/pull/396", label: "Add example for tabs-placement: header with updated layout settings" },
+        ],
+      },
+    ],
+  },
 };
 
-const blog = {
-  label: "Blog",
-  title: "1000 Words a day ...",
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
-};
+// const blog = {
+//   label: "Blog",
+//   title: "1000 Words a day ...",
+//   description: `Read what ${person.name} has been up to recently`,
+//   // Create new blog posts by adding a new .mdx file to app/blog/posts
+//   // All posts will be listed on the /blog route
+// };
 
-export { person, social, home, about, blog };
+// export { person, social, home, about, blog };
+
+export { person, social, home, about };

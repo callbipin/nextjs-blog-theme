@@ -64,8 +64,8 @@ export const Header = () => {
   }
 
   const t = useTranslations();
-  const { person, home, about, blog } = renderContent(t);
-
+  // const { person, home, about, blog } = renderContent(t);
+   const { person, home, about } = renderContent(t);
   return (
     <>
       <Flex
@@ -104,7 +104,7 @@ export const Header = () => {
             justifyContent="center"
           >
             <Flex gap="4" textVariant="body-default-s">
-              {routes["/"] && (
+              {/* {routes["/"] && (
                 <ToggleButton
                   prefixIcon="home"
                   href={`/${params?.locale}`}
@@ -114,20 +114,20 @@ export const Header = () => {
                     {home.label}
                   </Flex>
                 </ToggleButton>
-              )}
-              {routes["/about"] && (
+              )} */}
+              {routes["/"] && (
                 <ToggleButton
                   prefixIcon="person"
-                  href={`/${params?.locale}/about`}
-                  selected={pathname === "/about"}
+                  href={`/${params?.locale}/`}
+                  selected={pathname === "/"}
                 >
                   <Flex paddingX="2" hide="s">
-                    {about.label}
+                    {home.label}
                   </Flex>
                 </ToggleButton>
               )}
 
-              {routes["/blog"] && (
+              {/* {routes["/blog"] && (
                 <ToggleButton
                   prefixIcon="book"
                   href={`/${params?.locale}/blog`}
@@ -137,7 +137,7 @@ export const Header = () => {
                     {blog.label}
                   </Flex>
                 </ToggleButton>
-              )}
+              )} */}
             </Flex>
           </Flex>
         </Flex>
