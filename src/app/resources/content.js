@@ -6,7 +6,7 @@ const person = {
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Technical Writer",
+  role: "Customer Success and Growth Manager",
   avatar: "/images/avatar.jpg",
   location: "Asia/Kathmandu", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["English", "Nepali"], // optional: Leave the array empty if you don't want to display languages
@@ -41,13 +41,12 @@ const home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Writer and Generalist</>,
+  headline: <>Customer Success & Growth | Aspiring AI Product Manager</>,
   subline: (
     <>
-      I'm Bipin, a writer, public speaker, and an overall generalist.
+      I'm Bipin, a Customer Success and Growth Manager at EkLine.io.
       <br />
-      After hours, I make videos about communication, life, liberty, and the
-      pursuit of sausages.
+      I bridge the gap between complex AI technologies and user needs, combining technical expertise with customer-centric product strategies.
     </>
   ),
 };
@@ -72,20 +71,7 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        I am a Tech Support Specialist with 4+ years experience in Technical
-        Troubleshooting and Documentation. <br />
-        <br />
-        As the bridge between Product and Customer, I create comprehensive
-        guides that act as a roadmap customers can follow to reach their goals.
-        My in-depth analysis of the customer feedback addresses the key pain
-        points of the customers.
-        <br />
-        <br />
-        Additionally, I am a huge fan of telling and listening to stories. In my
-        free time, you will find me in Toastmasters around Kathmandu Valley,
-        listening to people's stories and smiling. If you are ever so lucky, you
-        may even get to see me get up on stage doing my best to make people
-        laugh.
+        I work at the intersection of customers, product, and engineering to define problems, shape solutions, and drive adoption of complex technical systems. With a background in technical documentation, data science, and security products, I specialize in translating user pain points into actionable product requirements, success metrics, and scalable workflows.
       </>
     ),
   },
@@ -94,8 +80,46 @@ const about = {
     title: "Work Experience",
     experiences: [
       {
+        company: "EkLine.io",
+        timeframe: "Oct 2025 - Present",
+        role: "Customer Success and Growth Manager",
+        achievements: [
+          <>
+            Led customer success strategy by analyzing usage patterns, support tickets, and qualitative feedback to identify product gaps and growth opportunities.
+          </>,
+          <>
+            Acted as the primary interface between customers, product, and engineering to translate real-world user problems into feature requirements and prioritization inputs.
+          </>,
+          <>
+            Defined customer success metrics and feedback loops to inform product iteration and retention strategies.
+          </>,
+          <>Contributed to growth initiatives by identifying friction points in onboarding and activation workflows.
+          </>
+
+        ],
+        images: [],
+      },
+      {
+        company: "EkLine.io",
+        timeframe: "April 2025 - Oct 2025",
+        role: "Consultant",
+        achievements: [
+          <>
+            Conducted discovery across customer workflows to identify scalability and adoption challenges.
+          </>,
+          <>
+            Advised on product positioning and early growth strategy based on customer behavior and competitive analysis.
+          </>,
+          <>
+
+            Helped establish foundational processes for customer feedback collection and product iteration.
+          </>,
+        ],
+        images: [],
+      },
+      {
         company: "Logpoint",
-        timeframe: "Feb 2023 - Present",
+        timeframe: "Feb 2023 - Oct 2025",
         role: "Technical Writer",
         achievements: [
           <>
@@ -178,23 +202,21 @@ const about = {
     title: "Skills",
     skills: [
       {
-        title: "Tools & Platforms",
+        title: "Product & Technical Skills",
         description: (
           <>
-            Proficient in:
+            Product Management:
             <ul>
-              <li>MadCap Flare</li>
-              <li>Confluence, Jira, bitbucket</li>
-              <li>Zendesk</li>
-              <li>Slack</li>
-              <li>Git, Gitbook</li>
-              <li>SIEM & SOAR Platforms</li>
-              <li>Salesforce</li>
+              <li>Product Strategy & Roadmap</li>
+              <li>User Research & Discovery</li>
+              <li>Data Analysis & Metrics</li>
+              <li>Agile & Scrum Methodologies</li>
             </ul>
-            Knowledge of:
+            Technical Proficiency:
             <ul>
-              <li>Programming languages: NodeJs, Python</li>
-              <li>Programming concepts: REST API, OOP</li>
+              <li>Programming: Python (Data Science), Node.js</li>
+              <li>Concepts: Machine Learning, REST APIs, OOP</li>
+              <li>Tools: Jira, Confluence, Git, SIEM/SOAR</li>
             </ul>
             <p>
               More skills are showcased in{" "}
